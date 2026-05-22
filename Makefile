@@ -53,16 +53,29 @@ $(error Unsupported compiler. Use clang or gcc)
 endif
 
 # ---------------------- MODE -------------------- #
-MODE				:= debug
+MODE				?= release
 
 # --------------------- FLAGS --------------------- #
-ifeq ($(COMPILER), clang)
+ifeq ($(MODE),release)
+	W_FLAGS			:= -Wall -Werror -Wextra
+else ifeq ($(COMPILER),clang)
 	W_FLAGS			:= 	-Wall -Werror -Wextra -Wvla -Wpedantic -pedantic-errors -Wmisleading-indentation \
 						-Wsign-conversion -Wshadow -Wnull-dereference -fshort-enums
 else
 	W_FLAGS			:= 	-Wall -Werror -Wextra -Wvla -Wpedantic -pedantic-errors -Wmisleading-indentation \
 					-Wsign-conversion -Wstrict-aliasing=3 -Wduplicated-cond -Wstringop-overflow -Wshadow\
 					-Wnull-dereference -Warray-bounds -Wrestrict -Wconversion
+endif
+
+# -------------------- C_FLAGS -------------------- #
+ifeq ($(MODE),debug)
+	C_FLAGS := -g -O1 -std=c99
+else ifeq ($(MODE),debug_memory)
+	C_FLAGS := -g -O1 -std=c99 -fsanitize=address -fsanitize=undefined -fno-omit-frame-pointer
+else ifeq ($(MODE),debug_thread)
+	C_FLAGS := -g -O1 -std=c99 -fsanitize=thread -fno-omit-frame-pointer
+else ifeq ($(MODE),release)
+	C_FLAGS := -O3 -march=native -std=c99
 endif
 
 # --------------------- FILES --------------------- #
