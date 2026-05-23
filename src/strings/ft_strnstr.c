@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_strings.h"
 
 static int	check_bl(const char *big, const char *little, size_t i, size_t len)
 {

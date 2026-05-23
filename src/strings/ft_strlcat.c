@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_strings.h"
 
 size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dst_s)
 {
