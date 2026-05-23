@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_stdlib.h"
 
 static int	ft_atoi_step_2(const char *str, int *i, int sign)
 {
