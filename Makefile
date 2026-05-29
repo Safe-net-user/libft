@@ -35,12 +35,14 @@ MATH				:= math
 CRYPTO				:= crypto
 STRINGS				:= strings
 IO					:= io
+FT_PRINTF			:= ft_printf
 MEMORY				:= mem
 SORT				:= sort
 DS					:= ds
 STDLIB_MALLOC		:= malloc
 ALLOCATOR			:= allocator
 DS_LINKEDLIST		:= linked_list
+DS_HASHTABLE		:= hashtable
 
 
 # ------------------- COMPILER -------------------- #
@@ -58,13 +60,15 @@ MODE				?= release
 # --------------------- FLAGS --------------------- #
 ifeq ($(MODE),release)
 	W_FLAGS			:= -Wall -Werror -Wextra
-else ifeq ($(COMPILER),clang)
-	W_FLAGS			:= 	-Wall -Werror -Wextra -Wvla -Wpedantic -pedantic-errors -Wmisleading-indentation \
-						-Wsign-conversion -Wshadow -Wnull-dereference -fshort-enums
 else
-	W_FLAGS			:= 	-Wall -Werror -Wextra -Wvla -Wpedantic -pedantic-errors -Wmisleading-indentation \
-					-Wsign-conversion -Wstrict-aliasing=3 -Wduplicated-cond -Wstringop-overflow -Wshadow\
-					-Wnull-dereference -Warray-bounds -Wrestrict -Wconversion
+	ifeq ($(COMPILER),clang)
+		W_FLAGS			:= 	-Wall -Werror -Wextra -Wvla -Wpedantic -pedantic-errors -Wmisleading-indentation \
+						-Wsign-conversion -Wshadow -Wnull-dereference -fshort-enums
+	else ifeq ($(COMPILER),GCC)
+		W_FLAGS			:= 	-Wall -Werror -Wextra -Wvla -Wpedantic -pedantic-errors -Wmisleading-indentation \
+						-Wsign-conversion -Wstrict-aliasing=3 -Wduplicated-cond -Wstringop-overflow -Wshadow\
+						-Wnull-dereference -Warray-bounds -Wrestrict -Wconversion
+	endif
 endif
 
 # -------------------- C_FLAGS -------------------- #
@@ -122,7 +126,28 @@ $(SRC)/$(DS)/$(DS_LINKEDLIST)/ft_lstadd_back.c \
 $(SRC)/$(DS)/$(DS_LINKEDLIST)/ft_lstdelone.c \
 $(SRC)/$(DS)/$(DS_LINKEDLIST)/ft_lstiter.c \
 $(SRC)/$(DS)/$(DS_LINKEDLIST)/ft_lstlast.c \
-$(SRC)/$(DS)/$(DS_LINKEDLIST)/ft_lstmap.c
+$(SRC)/$(DS)/$(DS_LINKEDLIST)/ft_lstmap.c \
+$(SRC)/$(DS)/$(DS_HASHTABLE)/get_pointer.c \
+$(SRC)/$(DS)/$(DS_HASHTABLE)/init_hash_table.c \
+$(SRC)/$(DS)/$(DS_HASHTABLE)/delete_entry.c \
+$(SRC)/$(DS)/$(DS_HASHTABLE)/set_new_value.c \
+$(SRC)/$(CRYPTO)/joaat_hash.c \
+$(SRC)/$(IO)/$(FT_PRINTF)/ft_parsing_format.c \
+$(SRC)/$(IO)/$(FT_PRINTF)/ft_printf.c \
+$(SRC)/$(IO)/$(FT_PRINTF)/ft_printf_utils.c \
+$(SRC)/$(IO)/$(FT_PRINTF)/handle_char.c \
+$(SRC)/$(IO)/$(FT_PRINTF)/handle_hexas_utils.c \
+$(SRC)/$(IO)/$(FT_PRINTF)/handle_int.c \
+$(SRC)/$(IO)/$(FT_PRINTF)/handle_lower_hexas.c \
+$(SRC)/$(IO)/$(FT_PRINTF)/handle_percent.c \
+$(SRC)/$(IO)/$(FT_PRINTF)/handle_pointer.c \
+$(SRC)/$(IO)/$(FT_PRINTF)/handle_pointer_utils.c \
+$(SRC)/$(IO)/$(FT_PRINTF)/handle_string.c \
+$(SRC)/$(IO)/$(FT_PRINTF)/handle_unsigned_int.c \
+$(SRC)/$(IO)/$(FT_PRINTF)/handle_upper_hexas.c \
+$(SRC)/$(IO)/$(FT_PRINTF)/putchar_fd.c \
+$(SRC)/$(IO)/$(FT_PRINTF)/putstr_fd.c \
+
 
 # -------------------- OBJECTS -------------------- #
 OBJECTS 			:= $(patsubst $(SRC)/%.c, $(OBJ)/%.o, $(SOURCES))
