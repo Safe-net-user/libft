@@ -4,7 +4,7 @@
 #include "ft_strings.h"
 #include "ft_crypto.h"
 
-t_val   delete_value(t_ht *ht, unsigned char *key)
+t_val   delete_entry(t_ht *ht, unsigned char *key)
 {
     size_t      n;
     size_t      index;
