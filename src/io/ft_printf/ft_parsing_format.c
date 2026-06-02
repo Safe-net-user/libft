@@ -63,6 +63,6 @@ t_format	*format_parsing(const char *format, int *i)
         while (format[*i] && is_present("0123456789", format[*i]))
             (*i)++;
     }
-    f->c = format[*i];
+    f->c = (unsigned char)format[*i];
     return (f);
 }

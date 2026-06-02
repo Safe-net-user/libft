@@ -61,7 +61,7 @@ int	handle_pointer(va_list argptr, t_format *f)
 	unsigned long	arg;
 
 	arg = va_arg(argptr, unsigned long);
-	src = malloc(len_str(arg, f) + 1);
+	src = malloc((size_t)len_str(arg, f) + 1);
 	if (!src)
 		return (0);
 	i = 0;

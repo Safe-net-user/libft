@@ -63,7 +63,7 @@ int	handle_unsigned_int(va_list argptr, t_format *f)
 	int				i;
 
 	arg = va_arg(argptr, unsigned int);
-	str = malloc(len_str_u(arg, f) + 1);
+	str = malloc((size_t)len_str_u(arg, f) + 1);
 	i = 0;
 	if (!str)
 		return (0);

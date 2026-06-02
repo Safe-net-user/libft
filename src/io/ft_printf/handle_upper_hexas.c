@@ -85,7 +85,7 @@ int	handle_upper_hexas(va_list argptr, t_format *f)
 	prefix = 0;
 	if (HASHTAG_F & f->flags && arg != 0)
 		prefix = 2;
-	p = malloc(len_str_h(arg, f) + prefix + 1);
+	p = malloc((size_t)len_str_h(arg, f) + (size_t)prefix + 1);
 	if (p == NULL)
 		return (0);
 	if (MINUS_F & f->flags)

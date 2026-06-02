@@ -19,10 +19,10 @@ static size_t	size_str(char *src, t_format *f)
 
 	n = ft_strlen(src);
 	if (n >= f->width && n >= f->precision)
-		return (n);
+		return ((size_t)n);
 	else if (f->width > f->precision)
-		return (f->width);
-	return (f->precision);
+		return ((size_t)f->width);
+	return ((size_t)f->precision);
 }
 
 static void	write_flags(char *arg, char *src, t_format *f, int *i)

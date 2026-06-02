@@ -89,7 +89,7 @@ int	handle_int(va_list argptr, t_format *f)
 	int		i;
 
 	nb = va_arg(argptr, int);
-	str = malloc(len_string(nb, f));
+	str = malloc((size_t)len_string(nb, f));
 	i = 0;
 	if (!str)
 		return (0);

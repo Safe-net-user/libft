@@ -51,7 +51,7 @@ int	handle_char(va_list argptr, t_format *f)
     int		count;
 
     arg = va_arg(argptr, int);
-    src = malloc(size_str(f) + 1);
+    src = malloc((size_t)size_str(f) + 1);
     i = 0;
     count = 0;
     if (!src)
