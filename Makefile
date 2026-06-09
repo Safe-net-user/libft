@@ -17,11 +17,12 @@ MAKEFLAGS			+= --no-print-directory
 NAME			:= libft.a
 
 # ------------------- CONSTANTS ------------------- #
-CC				:= cc
-AR				:= ar rcs
-RMRF			:= rm -rf
-RMF				:= rm -f
-MKDIR			:= mkdir -p
+CC					:= cc
+AR					:= ar rcs
+RMRF				:= rm -rf
+RMF					:= rm -f
+MKDIR				:= mkdir -p
+CC_VERSION			:= $(shell $(CC) --version)
 
 # --------------- MAIN DIRECTORIES ---------------- #
 HDR					:= include
@@ -43,15 +44,20 @@ STDLIB_MALLOC		:= malloc
 ALLOCATOR			:= allocator
 DS_LINKEDLIST		:= linked_list
 DS_HASHTABLE		:= hashtable
+STRING				:= string
+STACK				:= stack
+STR_BUILDER		:= string_builder
 
 
 # ------------------- COMPILER -------------------- #
-ifeq ($(findstring clang, $(shell $(CC) --version)), clang)
-	COMPILER		:= clang
-else ifeq ($(findstring GCC, $(shell $(CC) --version)), GCC)
-	COMPILER		:= gcc
+ifeq ($(findstring clang,$(CC_VERSION)),clang)
+    COMPILER := clang
 else
-$(error Unsupported compiler. Use clang or gcc)
+ifeq ($(findstring GCC,$(CC_VERSION)),GCC)
+    COMPILER := gcc
+else
+    $(error Unsupported compiler. Use clang or gcc)
+endif
 endif
 
 # ---------------------- MODE -------------------- #
@@ -64,7 +70,7 @@ else
 	ifeq ($(COMPILER),clang)
 		W_FLAGS			:= 	-Wall -Werror -Wextra -Wvla -Wpedantic -pedantic-errors -Wmisleading-indentation \
 						-Wsign-conversion -Wshadow -Wnull-dereference -fshort-enums
-	else ifeq ($(COMPILER),GCC)
+	else ifeq ($(COMPILER),gcc)
 		W_FLAGS			:= 	-Wall -Werror -Wextra -Wvla -Wpedantic -pedantic-errors -Wmisleading-indentation \
 						-Wsign-conversion -Wstrict-aliasing=3 -Wduplicated-cond -Wstringop-overflow -Wshadow\
 						-Wnull-dereference -Warray-bounds -Wrestrict -Wconversion
@@ -131,6 +137,7 @@ $(SRC)/$(DS)/$(DS_HASHTABLE)/get_pointer.c \
 $(SRC)/$(DS)/$(DS_HASHTABLE)/init_hash_table.c \
 $(SRC)/$(DS)/$(DS_HASHTABLE)/delete_entry.c \
 $(SRC)/$(DS)/$(DS_HASHTABLE)/set_new_value.c \
+$(SRC)/$(DS)/$(DS_HASHTABLE)/free_hash_table.c \
 $(SRC)/$(CRYPTO)/joaat_hash.c \
 $(SRC)/$(IO)/$(FT_PRINTF)/ft_parsing_format.c \
 $(SRC)/$(IO)/$(FT_PRINTF)/ft_printf.c \
@@ -147,7 +154,12 @@ $(SRC)/$(IO)/$(FT_PRINTF)/handle_unsigned_int.c \
 $(SRC)/$(IO)/$(FT_PRINTF)/handle_upper_hexas.c \
 $(SRC)/$(IO)/$(FT_PRINTF)/putchar_fd.c \
 $(SRC)/$(IO)/$(FT_PRINTF)/putstr_fd.c \
-
+$(SRC)/$(STDLIB)/$(STDLIB_MALLOC)/$(STACK)/init_stack_allocator.c \
+$(SRC)/$(STDLIB)/$(STDLIB_MALLOC)/$(STACK)/stack_alloc.c \
+$(SRC)/$(STDLIB)/$(STDLIB_MALLOC)/$(STACK)/stack_dealloc.c \
+$(SRC)/$(STRING)/$(STR_BUILDER)/init_sb.c \
+$(SRC)/$(STRING)/$(STR_BUILDER)/append_sb.c \
+$(SRC)/$(STRING)/$(STR_BUILDER)/free_sb.c \
 
 # -------------------- OBJECTS -------------------- #
 OBJECTS 			:= $(patsubst $(SRC)/%.c, $(OBJ)/%.o, $(SOURCES))
