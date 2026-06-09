@@ -5,12 +5,12 @@ t_ht    *init_hash_table(size_t n)
 {
     t_ht    *ht;
 
-    if (n == 0 || n > SIZE_MAX / sizeof(char *))
+    if (n == 0 || n > SIZE_MAX / sizeof(t_entry))
         return (NULL);
     ht = ft_calloc(1, sizeof(*ht));
     if (!ht)
         return (NULL);
-    ht->indexes = ft_calloc(n, sizeof(t_entry *));
+    ht->indexes = ft_calloc(n, sizeof(t_entry));
     if (!ht->indexes)
     {
         free(ht);
