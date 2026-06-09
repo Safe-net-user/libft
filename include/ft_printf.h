@@ -45,8 +45,8 @@ enum e_flags
 };
 
 /* main function */
-int			ft_printf(const char *format, ...);
 
+int			ft_printf(const char *format, ...) __attribute__ ((format (printf, 1, 2)));
 /* parsing function */
 t_format	*format_parsing(const char *format, int *i);
 
