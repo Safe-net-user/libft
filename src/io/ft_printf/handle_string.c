@@ -30,11 +30,11 @@ static void	write_flags(char *arg, char *src, t_format *f, int *i)
 	int	j;
 
 	j = 0;
-	if (f->precision >= 0 && f->precision < str_len(arg))
+	if ((size_t)f->precision >= 0 && (size_t)f->precision < ft_strlen(arg))
 		while (j++ < f->width - f->precision)
 			src[(*i)++] = ' ';
-	else if (str_len(arg) < f->width)
-		while (j++ < f->width - str_len(arg))
+	else if (ft_strlen(arg) < (size_t)f->width)
+		while ((size_t)j++ < (size_t)f->width - ft_strlen(arg))
 			src[(*i)++] = ' ';
 }
 
@@ -43,7 +43,7 @@ static void	write_param(char *arg, char *src, t_format *f, int *i)
 	int	j;
 
 	j = 0;
-	if (f->precision >= 0 && f->precision < str_len(arg))
+	if ((size_t)f->precision >= 0 && (size_t)f->precision < ft_strlen(arg))
 		while ((j < f->precision && arg[j]))
 			src[(*i)++] = arg[j++];
 	else
