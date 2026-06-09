@@ -21,7 +21,7 @@ typedef  struct s_stack_alloc
     size_t  capacity;
 }   t_stack_alloc;
 
-t_stack_alloc   *init_stack_allocator(t_stack_alloc *sa, size_t n);
+t_stack_alloc   *init_stack_allocator(size_t n);
 void   stack_dealloc(t_stack_alloc *sa);
 void   *stack_alloc(t_stack_alloc *sa, size_t size);
 
