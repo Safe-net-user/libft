@@ -1,8 +1,10 @@
 #include <stdlib.h>
 #include "ft_string_builder.h"
 
-t_sb    *init_sb(t_sb *sb, size_t capacity)
+t_sb    *init_sb(size_t capacity)
 {
+    t_sb    *sb;
+    
     sb = malloc(sizeof *sb);
     if (!sb)
         return (NULL);
