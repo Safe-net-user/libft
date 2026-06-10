@@ -8,4 +8,5 @@ void    free_sb(t_sb *sb)
     if (sb->str)
         free(sb->str);
     free(sb);
+    sb = NULL;
 }
