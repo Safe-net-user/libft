@@ -7,6 +7,8 @@ void    free_hash_table(t_ht *ht)
     size_t  i;
 
     i = 0;
+    if (!ht)
+        return ;
     while (i < ht->capacity)
     {
         if (ht->indexes[i].key != NULL  && ht->indexes[i].key != DELETED)
@@ -18,5 +20,4 @@ void    free_hash_table(t_ht *ht)
     }
     free(ht->indexes);
     free(ht);
-    ht = NULL;
 }
