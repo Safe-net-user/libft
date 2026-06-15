@@ -6,7 +6,7 @@
 #    By: gd-hallu <gd-hallu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/09 16:43:32 by gd-hallu          #+#    #+#              #
-#    Updated: 2025/11/20 23:50:31 by gd-hallu         ###   ########.fr        #
+#    Updated: 2026/06/15 12:07:07 by gd-hallu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -159,7 +159,9 @@ $(SRC)/$(STDLIB)/$(STDLIB_MALLOC)/$(STACK)/stack_alloc.c \
 $(SRC)/$(STDLIB)/$(STDLIB_MALLOC)/$(STACK)/stack_dealloc.c \
 $(SRC)/$(STRING)/$(STR_BUILDER)/init_sb.c \
 $(SRC)/$(STRING)/$(STR_BUILDER)/append_sb.c \
+$(SRC)/$(STRING)/$(STR_BUILDER)/append_ch_sb.c \
 $(SRC)/$(STRING)/$(STR_BUILDER)/free_sb.c \
+
 
 # -------------------- OBJECTS -------------------- #
 OBJECTS 			:= $(patsubst $(SRC)/%.c, $(OBJ)/%.o, $(SOURCES))
