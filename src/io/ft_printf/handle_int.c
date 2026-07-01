@@ -6,7 +6,7 @@
 /*   By: gd-hallu <gd-hallu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 10:52:50 by gd-hallu          #+#    #+#             */
-/*   Updated: 2026/01/14 18:46:48 by gd-hallu         ###   ########.fr       */
+/*   Updated: 2026/06/30 12:26:50 by gd-hallu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static void	int_to_ascii(char *src, long nb, int i)
 {
 	if (nb >= 10)
 		int_to_ascii(src, nb / 10, i - 1);
-	src[i] = (nb % 10) + '0';
+	src[i] = (char)(nb % 10) + '0';
 }
 
 static void	write_sign(t_format *f, int nb, char *src, int *i)

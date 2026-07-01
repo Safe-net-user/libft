@@ -6,7 +6,7 @@
 /*   By: gd-hallu <gd-hallu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 14:59:32 by gd-hallu          #+#    #+#             */
-/*   Updated: 2026/01/14 18:49:45 by gd-hallu         ###   ########.fr       */
+/*   Updated: 2026/06/30 12:28:15 by gd-hallu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static void	int_to_ascii(char *src, unsigned int nb, int i)
 {
 	if (nb >= 10)
 		int_to_ascii(src, nb / 10, i - 1);
-	src[i] = (nb % 10) + '0';
+	src[i] = (char)(nb % 10) + '0';
 }
 
 static void	write_flags(t_format *f, unsigned int nb, char *src, int *i)

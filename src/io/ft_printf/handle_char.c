@@ -6,7 +6,7 @@
 /*   By: gd-hallu <gd-hallu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 16:01:43 by gd-hallu          #+#    #+#             */
-/*   Updated: 2026/01/12 19:08:13 by gd-hallu         ###   ########.fr       */
+/*   Updated: 2026/06/30 12:26:21 by gd-hallu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int	handle_char(va_list argptr, t_format *f)
     int		i;
     int		count;
 
-    arg = va_arg(argptr, int);
+    arg = (char)va_arg(argptr, int);
     src = malloc((size_t)size_str(f) + 1);
     i = 0;
     count = 0;

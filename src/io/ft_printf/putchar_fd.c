@@ -6,7 +6,7 @@
 /*   By: gd-hallu <gd-hallu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 12:06:09 by gd-hallu          #+#    #+#             */
-/*   Updated: 2026/01/07 12:20:26 by gd-hallu         ###   ########.fr       */
+/*   Updated: 2026/06/30 12:28:37 by gd-hallu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	putchar_fd(char c, int fd)
 {
-    return (write(fd, &c, 1));
+    return (int)(write(fd, &c, 1));
 }

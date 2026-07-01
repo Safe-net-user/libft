@@ -6,7 +6,7 @@
 /*   By: gd-hallu <gd-hallu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/14 18:03:02 by gd-hallu          #+#    #+#             */
-/*   Updated: 2026/01/12 19:05:20 by gd-hallu         ###   ########.fr       */
+/*   Updated: 2026/06/30 12:27:58 by gd-hallu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static size_t	size_str(char *src, t_format *f)
 {
 	int	n;
 
-	n = ft_strlen(src);
+	n = (int)ft_strlen(src);
 	if (n >= f->width && n >= f->precision)
 		return ((size_t)n);
 	else if (f->width > f->precision)
