@@ -13,5 +13,6 @@ typedef struct s_sb
 t_sb    *init_sb(size_t capacity);
 int     append_sb(t_sb *sb, char *str);
 int     append_ch_sb(t_sb *sb, char c);
+void    clear_sb(t_sb *sb);
 void    free_sb(t_sb *sb);
 #endif

@@ -9,6 +9,7 @@ t_sb    *init_sb(size_t capacity)
     if (!sb)
         return (NULL);
     sb->str = malloc(capacity);
+    sb->str[0] = '\0';
     if (!sb->str)
     {
         free(sb);

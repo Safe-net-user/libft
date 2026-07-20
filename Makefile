@@ -113,6 +113,7 @@ $(SRC)/$(STRINGS)/ft_strlen.c  \
 $(SRC)/$(STRINGS)/ft_toupper.c \
 $(SRC)/$(MEMORY)/ft_memchr.c  \
 $(SRC)/$(STRINGS)/ft_strncmp.c \
+$(SRC)/$(STRINGS)/ft_strcmp.c \
 $(SRC)/$(STRINGS)/ft_strjoin.c \
 $(SRC)/$(STRINGS)/ft_substr.c  \
 $(SRC)/$(STRINGS)/ft_strtrim.c \
@@ -163,6 +164,7 @@ $(SRC)/$(STDLIB)/$(STDLIB_MALLOC)/$(STACK)/stack_dealloc.c \
 $(SRC)/$(STRING)/$(STR_BUILDER)/init_sb.c \
 $(SRC)/$(STRING)/$(STR_BUILDER)/append_sb.c \
 $(SRC)/$(STRING)/$(STR_BUILDER)/append_ch_sb.c \
+$(SRC)/$(STRING)/$(STR_BUILDER)/clear_sb.c \
 $(SRC)/$(STRING)/$(STR_BUILDER)/free_sb.c \
 
 
