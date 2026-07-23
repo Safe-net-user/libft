@@ -12,17 +12,30 @@
 
 #include "ft_stdlib.h"
 
+#include <limits.h>
+
 static int	ft_atoi_step_2(const char *str, int *i, int sign)
 {
-	int	count;
-	int	j;
+	long	count;
+	int		j;
+	int		digit;
 
 	count = 0;
 	j = *i;
-	while (str[j] && (str[j] >= '0' && str[j] <= '9'))
+	while (str[j] >= '0' && str[j] <= '9')
 	{
-		count *= 10;
-		count += str[j] - 48;
+		digit = str[j] - '0';
+		if (sign < 0)
+		{
+			if (count > (-(long)INT_MIN - digit) / 10)
+				return (0);
+		}
+		else
+		{
+			if (count > ((long)INT_MAX - digit) / 10)
+				return (0);
+		}
+		count = count * 10 + digit;
 		j++;
 	}
 	if (sign < 0)
