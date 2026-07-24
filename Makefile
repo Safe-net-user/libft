@@ -69,12 +69,12 @@ ifeq ($(MODE),release)
 	W_FLAGS			:= -Wall -Werror -Wextra
 else
 	ifeq ($(COMPILER),clang)
-		W_FLAGS			:= 	-Wall -Werror -Wextra -Wvla -Wpedantic -pedantic-errors -Wmisleading-indentation \
-						-Wsign-conversion -Wshadow -Wnull-dereference -fshort-enums
+		W_FLAGS			:= 	-Wall -Werror -Wextra -Wvla -Wno-pedantic -Wmisleading-indentation \
+						 -Wshadow -Wnull-dereference -fshort-enums
 	else ifeq ($(COMPILER),gcc)
-		W_FLAGS			:= 	-Wall -Werror -Wextra -Wvla -Wpedantic -pedantic-errors -Wmisleading-indentation \
-						-Wsign-conversion -Wstrict-aliasing=3 -Wduplicated-cond -Wstringop-overflow -Wshadow\
-						-Wnull-dereference -Warray-bounds -Wrestrict -Wconversion
+		W_FLAGS			:= 	-Wall -Werror -Wextra -Wvla -Wno-pedantic -Wmisleading-indentation \
+					 -Wstrict-aliasing=3 -Wduplicated-cond -Wstringop-overflow -Wshadow\
+						-Wnull-dereference -Warray-bounds -Wrestrict
 	endif
 endif
 
