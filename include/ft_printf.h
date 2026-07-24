@@ -6,7 +6,7 @@
 /*   By: gd-hallu <gd-hallu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 23:28:09 by gd-hallu          #+#    #+#             */
-/*   Updated: 2026/01/12 19:03:42 by gd-hallu         ###   ########.fr       */
+/*   Updated: 2026/07/24 10:15:00 by gd-hallu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,8 @@ enum e_flags
 
 /* main function */
 
-int			ft_printf(const char *format, ...) __attribute__ ((format (printf, 1, 2)));
+int			ft_printf(const char *format, ...) \
+__attribute__ ((format (printf, 1, 2)));
 /* parsing function */
 t_format	*format_parsing(const char *format, int *i);
 

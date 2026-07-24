@@ -6,7 +6,7 @@
 /*   By: gd-hallu <gd-hallu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 15:06:59 by gd-hallu          #+#    #+#             */
-/*   Updated: 2025/11/20 15:09:57 by gd-hallu         ###   ########.fr       */
+/*   Updated: 2026/07/24 11:12:52 by gd-hallu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static char	*int_to_ascii(char *src, long n, int i)
 
 char	*ft_itoa(int nb)
 {
-	int	sign;
+	int		sign;
 	char	*p;
 	long	n;
 

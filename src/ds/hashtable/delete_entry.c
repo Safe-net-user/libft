@@ -1,28 +1,40 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   delete_entry.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gd-hallu <gd-hallu@learner.42.tech>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/07/24 10:32:29 by gd-hallu          #+#    #+#             */
+/*   Updated: 2026/07/24 10:33:09 by gd-hallu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stddef.h>
 #include "ft_hashtable.h"
 #include "ft_memory.h"
 #include "ft_strings.h"
 #include "ft_crypto.h"
 
-t_val   delete_entry(t_ht *ht, char *key)
+t_val	delete_entry(t_ht *ht, char *key)
 {
-    size_t      n;
-    size_t      index;
+	size_t	n;
+	size_t	index;
 
-    if (ht->entries == 0)
-        return (EMPTY);
-    n = ft_strlen(key);
-    index = joaat_hash((unsigned char *)key, n) % ht->capacity;
-    while (ht->indexes[index].key != NULL)
-    {
-        if (ft_memcmp(ht->indexes[index].key, key, n + 1) == 0)
-        {
-            ht->entries--;
-            free(ht->indexes[index].value);
-            ht->indexes[index].key = DELETED;
-            return (SUCCESS);
-        }
-        index = (index + 1) % ht->capacity;
-    }
-    return (ERROR);
+	if (ht->entries == 0)
+		return (EMPTY);
+	n = ft_strlen(key);
+	index = joaat_hash((unsigned char *)key, n) % ht->capacity;
+	while (ht->indexes[index].key != NULL)
+	{
+		if (ft_memcmp(ht->indexes[index].key, key, n + 1) == 0)
+		{
+			ht->entries--;
+			free(ht->indexes[index].value);
+			ht->indexes[index].key = DELETED;
+			return (SUCCESS);
+		}
+		index = (index + 1) % ht->capacity;
+	}
+	return (ERROR);
 }

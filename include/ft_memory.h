@@ -1,7 +1,19 @@
-#ifndef FT_MEMORY_H
-#define FT_MEMORY_H
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memory.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gd-hallu <gd-hallu@learner.42.tech>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/07/24 10:11:20 by gd-hallu          #+#    #+#             */
+/*   Updated: 2026/07/24 10:12:04 by gd-hallu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-# include<stddef.h>
+#ifndef FT_MEMORY_H
+# define FT_MEMORY_H
+
+# include <stddef.h>
 # include <stdlib.h>
 
 void	*ft_memchr(const void *s, int c, size_t n);

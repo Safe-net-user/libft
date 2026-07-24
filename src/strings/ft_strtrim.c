@@ -6,7 +6,7 @@
 /*   By: gd-hallu <gd-hallu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 16:05:22 by gd-hallu          #+#    #+#             */
-/*   Updated: 2025/11/20 16:01:13 by gd-hallu         ###   ########.fr       */
+/*   Updated: 2026/07/24 11:18:59 by gd-hallu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static size_t	index_suffixe(char const *str, char const *set)
 	return (i);
 }
 
-static size_t size_p(const char *str, char const *set)
+static size_t	size_p(const char *str, char const *set)
 {
 	size_t	i;
 	size_t	j;

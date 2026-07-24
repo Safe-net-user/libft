@@ -1,9 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strings.h                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gd-hallu <gd-hallu@learner.42.tech>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/07/24 10:20:45 by gd-hallu          #+#    #+#             */
+/*   Updated: 2026/07/24 10:21:09 by gd-hallu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FT_STRINGS_H
-#define FT_STRINGS_H
+# define FT_STRINGS_H
 
 # include <stddef.h>
 # include <stdlib.h>
-
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -16,7 +27,7 @@ size_t	ft_strlcat(char *d, const char *src, size_t dst_size);
 size_t	ft_strlcpy(char *dst, const char *src, size_t s);
 size_t	ft_strlen(const char *str);
 int		ft_strncmp(char *s1, char *s2, size_t n);
-int     ft_strcmp(char *s1, char *s2);
+int		ft_strcmp(char *s1, char *s2);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *s, int c);
 int		ft_tolower(int c);

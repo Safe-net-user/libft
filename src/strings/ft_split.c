@@ -6,7 +6,7 @@
 /*   By: gd-hallu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 16:27:18 by gd-hallu          #+#    #+#             */
-/*   Updated: 2025/11/14 12:00:33 by gd-hallu         ###   ########.fr       */
+/*   Updated: 2026/07/24 11:18:32 by gd-hallu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static size_t	occ_separator(char const *s, char c)
 {
 	unsigned int	i;
-	size_t				occ;
+	size_t			occ;
 
 	i = 0;
 	occ = 0;

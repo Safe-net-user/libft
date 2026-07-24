@@ -6,7 +6,7 @@
 /*   By: gd-hallu <gd-hallu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 08:17:15 by gd-hallu          #+#    #+#             */
-/*   Updated: 2026/01/12 19:10:02 by gd-hallu         ###   ########.fr       */
+/*   Updated: 2026/07/24 10:47:14 by gd-hallu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	handle_percent(va_list argptr, t_format *f)
 {
-    (void) argptr;
-    (void) f;
-    return (putchar_fd('%', STDOUT));
+	(void) argptr;
+	(void) f;
+	return (putchar_fd('%', STDOUT));
 }
