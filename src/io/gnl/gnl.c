@@ -12,6 +12,7 @@
 
 #include "gnl.h"
 #include <errno.h>
+#include "ft_strings.h"
 
 static char	*g_buf = NULL;
 
@@ -97,7 +98,7 @@ char	*gnl(int fd, int *interrupted)
 	char	*tmp;
 	int		res;
 
-	res = hd_fill_buffer(fd);
+	res = fill_buffer(fd);
 	if (interrupted)
 		*interrupted = (res == -2);
 	if (res == -1 || res == -2)
