@@ -31,7 +31,7 @@ t_val	delete_entry(t_ht *ht, char *key)
 		{
 			ht->entries--;
 			free(ht->indexes[index].value);
-			ht->indexes[index].key = DELETED;
+			ht->indexes[index].key = ((void *)-1);
 			return (SUCCESS);
 		}
 		index = (index + 1) % ht->capacity;

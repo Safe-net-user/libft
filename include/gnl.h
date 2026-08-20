@@ -6,12 +6,12 @@
 /*   By: miouali <miouali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/20 11:45:18 by miouali           #+#    #+#             */
-/*   Updated: 2026/08/20 11:46:32 by miouali          ###   ########.fr       */
+/*   Updated: 2026/08/21 01:42:14 by gaspard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GNL_H
+# define GNL_H
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 2048
@@ -27,7 +27,7 @@ char	*ft_strjoin_free(char *s1, char *s2);
 int		line_matches_delim(char *line, char *lim);
 void	gnl_reset(void);
 char	*ft_strjoin_free(char *s1, char *s2);
-int	line_matches_delim(char *line, char *lim);
-char    *gnl_strchr(const char *s, int c);
+int		line_matches_delim(char *line, char *lim);
+char	*gnl_strchr(const char *s, int c);
 
 #endif

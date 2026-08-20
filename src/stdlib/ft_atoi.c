@@ -39,8 +39,8 @@ static int	ft_atoi_step_2(const char *str, int *i, int sign)
 		j++;
 	}
 	if (sign < 0)
-		return (-count);
-	return (count);
+		return ((int)-count);
+	return ((int)count);
 }
 
 int	ft_atoi(const char *str)

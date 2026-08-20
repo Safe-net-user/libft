@@ -6,24 +6,24 @@
 /*   By: miouali <miouali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/20 11:38:43 by miouali           #+#    #+#             */
-/*   Updated: 2026/08/20 11:44:53 by miouali          ###   ########.fr       */
+/*   Updated: 2026/08/21 01:44:42 by gaspard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "gnl.h"
 #include "ft_strings.h"
 
-char    *gnl_strchr(const char *s, int c)
+char	*gnl_strchr(const char *s, int c)
 {
-    while (s && *s)
-    {
-        if (*s == (char)c)
-            return ((char *)s);
-        s++;
-    }
-    if (s && (char)c == '\0')
-        return ((char *)s);
-    return (NULL);
+	while (s && *s)
+	{
+		if (*s == (char)c)
+			return ((char *)s);
+		s++;
+	}
+	if (s && (char)c == '\0')
+		return ((char *)s);
+	return (NULL);
 }
 
 char	*ft_strjoin_free(char *s1, char *s2)

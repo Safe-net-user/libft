@@ -6,7 +6,7 @@
 /*   By: gd-hallu <gd-hallu@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/24 10:12:11 by gd-hallu          #+#    #+#             */
-/*   Updated: 2026/07/24 10:14:00 by gd-hallu         ###   ########.fr       */
+/*   Updated: 2026/08/21 01:43:08 by gaspard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@
 # include <stddef.h>
 # include <stdint.h>
 # include <stdlib.h>
-
-# define DELETED ((void *)-1)
 
 typedef struct s_entry
 {
