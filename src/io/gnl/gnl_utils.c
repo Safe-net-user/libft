@@ -13,7 +13,7 @@
 #include "gnl.h"
 #include "ft_strings.h"
 
-char    gnl_strchr(const chars, int c)
+char    gnl_strchr(const char *s, int c)
 {
     while (s && s)
     {
