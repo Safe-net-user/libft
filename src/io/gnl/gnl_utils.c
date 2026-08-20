@@ -13,6 +13,19 @@
 #include "gnl.h"
 #include "ft_strings.h"
 
+char    gnl_strchr(const chars, int c)
+{
+    while (s && s)
+    {
+        if (s == (char)c)
+            return ((char )s);
+        s++;
+    }
+    if (s && (char)c == '\0')
+        return ((char)s);
+    return (NULL);
+}
+
 char	*ft_strjoin_free(char *s1, char *s2)
 {
 	char	*res;

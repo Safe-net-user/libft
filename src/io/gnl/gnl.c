@@ -22,7 +22,7 @@ static int	fill_buffer(int fd)
 	ssize_t	bytes_read;
 
 	bytes_read = 1;
-	while (!ft_strchr(g_buf, '\n') && bytes_read > 0)
+	while (!gnl_strchr(g_buf, '\n') && bytes_read > 0)
 	{
 		bytes_read = read(fd, read_buf, BUFFER_SIZE);
 		if (bytes_read == -1 && errno == EINTR)
@@ -52,7 +52,7 @@ static char	*extract_line(char *buf)
 
 	if (!buf || !buf[0])
 		return (NULL);
-	nl = ft_strchr(buf, '\n');
+	nl = gnl_strchr(buf, '\n');
 	if (nl)
 		len = (size_t)(nl - buf) + 1;
 	else
@@ -76,7 +76,7 @@ static char	*extract_rest(char *buf)
 	char	*rest;
 	size_t	i;
 
-	nl = ft_strchr(buf, '\n');
+	nl = gnl_strchr(buf, '\n');
 	if (!nl)
 		return (NULL);
 	rest = malloc(ft_strlen(nl + 1) + 1);
