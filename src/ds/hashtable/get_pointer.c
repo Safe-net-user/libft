@@ -28,7 +28,7 @@ char	*get_pointer(t_ht *ht, char *key)
 	tmp_index = index - 1;
 	while (ht->indexes[index].key != NULL)
 	{
-		if (ht->indexes[index].key != DELETED)
+		if (ht->indexes[index].key != ((void *)-1))
 			if (ft_strncmp(ht->indexes[index].key, key, n + 1) == 0)
 				return (ht->indexes[index].value);
 		if (__builtin_expect(tmp_index == index, 0))

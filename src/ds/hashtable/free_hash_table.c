@@ -22,7 +22,7 @@ void	free_hash_table(t_ht *ht)
 		return ;
 	while (i < ht->capacity)
 	{
-		if (ht->indexes[i].key != NULL && ht->indexes[i].key != DELETED)
+		if (ht->indexes[i].key != NULL && ht->indexes[i].key != ((void *)-1))
 		{
 			free(ht->indexes[i].value);
 			free(ht->indexes[i].key);
