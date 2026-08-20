@@ -25,5 +25,6 @@
 char	*gnl(int fd, int *interrupted);
 char	*ft_strjoin_free(char *s1, char *s2);
 int		line_matches_delim(char *line, char *lim);
+void	gnl_reset(void);
 
 #endif
