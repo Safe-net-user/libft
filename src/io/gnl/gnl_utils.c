@@ -15,7 +15,7 @@
 
 char    *gnl_strchr(const char *s, int c)
 {
-    while (s && s*)
+    while (s && *s)
     {
         if (s == (char)c)
             return ((char *)s);
