@@ -28,6 +28,6 @@ int		line_matches_delim(char *line, char *lim);
 void	gnl_reset(void);
 char	*ft_strjoin_free(char *s1, char *s2);
 int	line_matches_delim(char *line, char *lim);
-char    gnl_strchr(const chars, int c);
+char    gnl_strchr(const char *s, int c);
 
 #endif
