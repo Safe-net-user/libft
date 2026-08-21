@@ -13,11 +13,17 @@
 #include "ft_stack_alloc.h"
 #include <stdio.h>
 
+static size_t	align_size(size_t size)
+{
+	return ((size + ALIGNMENT - 1) & ~(ALIGNMENT - 1));
+}
+
 void	*stack_alloc(t_stack_alloc *sa, size_t size)
 {
 	t_header	*h;
 	t_header	*last;
 
+	size = align_size(size);
 	if ((size_t)((uint8_t *)sa->up - (uint8_t *)sa->buffer) + \
 sizeof(*h) + size > sa->capacity)
 		return (NULL);
