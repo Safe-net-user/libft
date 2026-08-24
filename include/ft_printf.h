@@ -27,10 +27,11 @@
 
 typedef struct s_format
 {
-	unsigned char	c;
 	int				flags;
 	int				width;
 	int				precision;
+	unsigned char	c;
+	char			padding[3];
 }	t_format;
 
 typedef int	(*t_funct)(va_list ap, t_format *f);
