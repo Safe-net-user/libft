@@ -29,6 +29,6 @@ void	gnl_reset(void);
 char	*ft_strjoin_free(char *s1, char *s2);
 int		line_matches_delim(char *line, char *lim);
 char	*gnl_strchr(const char *s, int c);
-int	    gnl_check_empty(char **buf);
+int		gnl_check_empty(char **buf);
 
 #endif
