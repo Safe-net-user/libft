@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   gnl.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: miouali <miouali@student.42.fr>            +#+  +:+       +#+        */
+/*   By: fiaudfiz <fiaudfiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/20 11:38:46 by miouali           #+#    #+#             */
-/*   Updated: 2026/08/21 01:44:04 by gaspard          ###   ########.fr       */
+/*   Updated: 2026/08/24 15:44:42 by fiaudfiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,28 @@
 #include <errno.h>
 #include "ft_strings.h"
 
-static char	*g_buf = NULL;
-
-static int	fill_buffer(int fd)
+static int	fill_buffer(int fd, char **buf)
 {
 	char	read_buf[BUFFER_SIZE + 1];
 	ssize_t	bytes_read;
 
 	bytes_read = 1;
-	while (!gnl_strchr(g_buf, '\n') && bytes_read > 0)
+	while (!gnl_strchr(*buf, '\n') && bytes_read > 0)
 	{
 		bytes_read = read(fd, read_buf, BUFFER_SIZE);
 		if (bytes_read == -1 && errno == EINTR)
 			return (-2);
 		if (bytes_read == -1)
 		{
-			free(g_buf);
-			g_buf = NULL;
+			free(*buf);
+			*buf = NULL;
 			return (-1);
 		}
 		if (bytes_read == 0)
 			break ;
 		read_buf[bytes_read] = '\0';
-		g_buf = ft_strjoin_free(g_buf, read_buf);
-		if (!g_buf)
+		*buf = ft_strjoin_free(*buf, read_buf);
+		if (!*buf)
 			return (-1);
 	}
 	return (0);
@@ -94,30 +92,27 @@ static char	*extract_rest(char *buf)
 
 char	*gnl(int fd, int *interrupted)
 {
-	char	*line;
-	char	*tmp;
-	int		res;
+	static char	*buf = NULL;
+	char		*line;
+	char		*tmp;
+	int			res;
 
-	res = fill_buffer(fd);
+	if (fd == -1)
+	{
+		free(buf);
+		buf = NULL;
+		return (NULL);
+	}
+	res = fill_buffer(fd, &buf);
 	if (interrupted)
 		*interrupted = (res == -2);
 	if (res == -1 || res == -2)
 		return (NULL);
-	if (!g_buf || !g_buf[0])
-	{
-		free(g_buf);
-		g_buf = NULL;
+	if (gnl_check_empty(&buf))
 		return (NULL);
-	}
-	line = extract_line(g_buf);
-	tmp = g_buf;
-	g_buf = extract_rest(g_buf);
+	line = extract_line(buf);
+	tmp = buf;
+	buf = extract_rest(buf);
 	free(tmp);
 	return (line);
-}
-
-void	gnl_reset(void)
-{
-	free(g_buf);
-	g_buf = NULL;
 }

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gd-hallu <gd-hallu@student.42.fr>          +#+  +:+       +#+         #
+#    By: fiaudfiz <fiaudfiz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/09 16:43:32 by gd-hallu          #+#    #+#              #
-#    Updated: 2026/06/30 21:19:00 by gd-hallu         ###   ########.fr        #
+#    Updated: 2026/08/24 15:48:13 by fiaudfiz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -127,7 +127,8 @@ $(SRC)/$(IO)/ft_putstr_fd.c  \
 $(SRC)/$(IO)/ft_putendl_fd.c \
 $(SRC)/$(IO)/ft_putnbr_fd.c \
 $(SRC)/$(IO)/$(GNL)/gnl.c \
-$(SRC)/$(IO)/$(GNL)/gnl_utils.c \
+$(SRC)/$(IO)/$(GNL)/gnl_utils_0.c \
+$(SRC)/$(IO)/$(GNL)/gnl_utils_1.c \
 $(SRC)/$(DS)/$(DS_LINKEDLIST)/ft_lstnew.c \
 $(SRC)/$(DS)/$(DS_LINKEDLIST)/ft_lstadd_front.c \
 $(SRC)/$(DS)/$(DS_LINKEDLIST)/ft_lstsize.c \
