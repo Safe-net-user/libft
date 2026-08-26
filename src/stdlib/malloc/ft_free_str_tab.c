@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stdlib.h                                        :+:      :+:    :+:   */
+/*   ft_free_str_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: miouali <miouali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/24 10:11:37 by gd-hallu          #+#    #+#             */
-/*   Updated: 2026/08/26 12:07:40 by miouali          ###   ########.fr       */
+/*   Created: 2026/02/01 18:34:30 by miouali           #+#    #+#             */
+/*   Updated: 2026/08/26 11:58:12 by miouali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STDLIB_H
-# define FT_STDLIB_H
+#include "ft_stdlib.h"
 
-# include <stddef.h>
-# include <stdlib.h>
-# include <limits.h>
+void	ft_free_str_tab(char **tab)
+{
+	int	i;
 
-int		ft_atoi(const char *str);
-void	*ft_calloc(size_t nmemb, size_t size);
-char	*ft_itoa(int n);
-double	ft_atof(const char *str);
-void	ft_free_str_tab(char **tab);
-void	*ft_realloc(void *ptr, size_t old_size, size_t new_size);
-
-#endif
+	i = 0;
+	if (!tab)
+		return ;
+	while (tab[i] != NULL)
+	{
+		free (tab[i]);
+		i++;
+	}
+	free (tab);
+	tab = NULL;
+	return ;
+}
