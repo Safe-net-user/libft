@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: fiaudfiz <fiaudfiz@student.42.fr>          +#+  +:+       +#+         #
+#    By: miouali <miouali@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/09 16:43:32 by gd-hallu          #+#    #+#              #
-#    Updated: 2026/08/24 15:48:13 by fiaudfiz         ###   ########.fr        #
+#    Updated: 2026/08/26 11:51:17 by miouali          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,6 +48,7 @@ STRING				:= string
 STACK				:= stack
 STR_BUILDER			:= string_builder
 GNL					:= gnl
+MATH				:= math
 
 
 # ------------------- COMPILER -------------------- #
@@ -167,6 +168,8 @@ $(SRC)/$(STRING)/$(STR_BUILDER)/append_sb.c \
 $(SRC)/$(STRING)/$(STR_BUILDER)/append_ch_sb.c \
 $(SRC)/$(STRING)/$(STR_BUILDER)/clear_sb.c \
 $(SRC)/$(STRING)/$(STR_BUILDER)/free_sb.c \
+$(SRC)/$(MATH)/ft_pow.c \
+$(SRC)/$(MATH)/ft_sqrt.c \
 
 
 # -------------------- OBJECTS -------------------- #
