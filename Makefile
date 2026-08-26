@@ -6,7 +6,7 @@
 #    By: miouali <miouali@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/09 16:43:32 by gd-hallu          #+#    #+#              #
-#    Updated: 2026/08/26 11:51:17 by miouali          ###   ########.fr        #
+#    Updated: 2026/08/26 12:07:00 by miouali          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -104,22 +104,27 @@ $(SRC)/$(STRINGS)/ft_strlcat.c \
 $(SRC)/$(STRINGS)/ft_strchr.c \
 $(SRC)/$(STRINGS)/ft_strrchr.c \
 $(SRC)/$(STDLIB)/$(STDLIB_MALLOC)/ft_calloc.c  \
+$(SRC)/$(STDLIB)/$(STDLIB_MALLOC)/ft_free_str_tab.c  \
+$(SRC)/$(STDLIB)/$(STDLIB_MALLOC)/ft_realloc.c  \
 $(SRC)/$(STRINGS)/ft_isdigit.c \
 $(SRC)/$(MEMORY)/ft_memmove.c \
 $(SRC)/$(STRINGS)/ft_strlcpy.c \
 $(SRC)/$(STRINGS)/ft_tolower.c \
 $(SRC)/$(STRINGS)/ft_isprint.c \
 $(SRC)/$(MEMORY)/ft_memset.c  \
+$(SRC)/$(MEMORY)/ft_print_memory.c  \
 $(SRC)/$(STRINGS)/ft_strlen.c  \
 $(SRC)/$(STRINGS)/ft_toupper.c \
 $(SRC)/$(MEMORY)/ft_memchr.c  \
 $(SRC)/$(STRINGS)/ft_strncmp.c \
+$(SRC)/$(STRINGS)/ft_strjoin_free.c \
 $(SRC)/$(STRINGS)/ft_strcmp.c \
 $(SRC)/$(STRINGS)/ft_strjoin.c \
 $(SRC)/$(STRINGS)/ft_substr.c  \
 $(SRC)/$(STRINGS)/ft_strtrim.c \
 $(SRC)/$(STRINGS)/ft_split.c   \
 $(SRC)/$(STDLIB)/ft_itoa.c    \
+$(SRC)/$(STDLIB)/ft_atof.c    \
 $(SRC)/$(STRINGS)/ft_isalnum.c \
 $(SRC)/$(STRINGS)/ft_strmapi.c \
 $(SRC)/$(STRINGS)/ft_striteri.c\
@@ -127,6 +132,7 @@ $(SRC)/$(IO)/ft_putchar_fd.c \
 $(SRC)/$(IO)/ft_putstr_fd.c  \
 $(SRC)/$(IO)/ft_putendl_fd.c \
 $(SRC)/$(IO)/ft_putnbr_fd.c \
+$(SRC)/$(IO)/ft_putnbr_base.c \
 $(SRC)/$(IO)/$(GNL)/gnl.c \
 $(SRC)/$(IO)/$(GNL)/gnl_utils_0.c \
 $(SRC)/$(IO)/$(GNL)/gnl_utils_1.c \
