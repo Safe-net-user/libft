@@ -6,13 +6,14 @@
 /*   By: miouali <miouali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/26 11:48:40 by miouali           #+#    #+#             */
-/*   Updated: 2026/08/26 11:49:14 by miouali          ###   ########.fr       */
+/*   Updated: 2026/08/26 13:49:10 by miouali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_MATH_H
 # define FT_MATH_H
 
-
+double	ft_pow(double nb, int power);
+int	ft_sqrt(int nb);
 
 #endif
