@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_io.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gd-hallu <gd-hallu@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: miouali <miouali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/24 10:10:22 by gd-hallu          #+#    #+#             */
-/*   Updated: 2026/07/24 10:10:29 by gd-hallu         ###   ########.fr       */
+/*   Updated: 2026/08/26 12:03:41 by miouali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,5 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+int     ft_putnbr_base(int n, char *base);
 #endif
