@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strings.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gd-hallu <gd-hallu@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: miouali <miouali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/24 10:20:45 by gd-hallu          #+#    #+#             */
-/*   Updated: 2026/07/24 10:21:09 by gd-hallu         ###   ########.fr       */
+/*   Updated: 2026/08/26 12:08:06 by miouali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_strmapi(char const *s, char (*f) (unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+char	*ft_strjoin_free(char *s1, char *s2, int mode);
 
 #endif
