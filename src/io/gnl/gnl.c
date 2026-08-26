@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   gnl.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fiaudfiz <fiaudfiz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: miouali <miouali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/20 11:38:46 by miouali           #+#    #+#             */
-/*   Updated: 2026/08/24 15:44:42 by fiaudfiz         ###   ########.fr       */
+/*   Updated: 2026/08/26 12:11:01 by miouali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static int	fill_buffer(int fd, char **buf)
 		if (bytes_read == 0)
 			break ;
 		read_buf[bytes_read] = '\0';
-		*buf = ft_strjoin_free(*buf, read_buf);
+		*buf = ft_strjoin_free(*buf, read_buf, 1);
 		if (!*buf)
 			return (-1);
 	}

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   gnl.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fiaudfiz <fiaudfiz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: miouali <miouali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/20 11:45:18 by miouali           #+#    #+#             */
-/*   Updated: 2026/08/24 15:45:17 by fiaudfiz         ###   ########.fr       */
+/*   Updated: 2026/08/26 12:10:23 by miouali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,8 @@
 # include <fcntl.h>
 
 char	*gnl(int fd, int *interrupted);
-char	*ft_strjoin_free(char *s1, char *s2);
 int		line_matches_delim(char *line, char *lim);
 void	gnl_reset(void);
-char	*ft_strjoin_free(char *s1, char *s2);
 int		line_matches_delim(char *line, char *lim);
 char	*gnl_strchr(const char *s, int c);
 int		gnl_check_empty(char **buf);
