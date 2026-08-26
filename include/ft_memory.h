@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memory.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gd-hallu <gd-hallu@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: miouali <miouali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/24 10:11:20 by gd-hallu          #+#    #+#             */
-/*   Updated: 2026/07/24 10:12:04 by gd-hallu         ###   ########.fr       */
+/*   Updated: 2026/08/26 12:04:50 by miouali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memset(void *n, int value, size_t count);
 void	ft_bzero(void *s, size_t n);
+void	*ft_print_memory(void *addr, unsigned int size);
 
 #endif
