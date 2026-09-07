@@ -49,6 +49,7 @@ STACK				:= stack
 STR_BUILDER			:= string_builder
 GNL					:= gnl
 MATH				:= math
+VECTOR				:= vector
 
 
 # ------------------- COMPILER -------------------- #
@@ -150,6 +151,11 @@ $(SRC)/$(DS)/$(DS_HASHTABLE)/init_hash_table.c \
 $(SRC)/$(DS)/$(DS_HASHTABLE)/delete_entry.c \
 $(SRC)/$(DS)/$(DS_HASHTABLE)/set_new_value.c \
 $(SRC)/$(DS)/$(DS_HASHTABLE)/free_hash_table.c \
+$(SRC)/$(DS)/$(VECTOR)/init_vector.c \
+$(SRC)/$(DS)/$(VECTOR)/insert_vector.c \
+$(SRC)/$(DS)/$(VECTOR)/pop_back_vector.c \
+$(SRC)/$(DS)/$(VECTOR)/push_back_vector.c \
+$(SRC)/$(DS)/$(VECTOR)/size_vector.c \
 $(SRC)/$(CRYPTO)/joaat_hash.c \
 $(SRC)/$(IO)/$(FT_PRINTF)/ft_parsing_format.c \
 $(SRC)/$(IO)/$(FT_PRINTF)/ft_printf.c \
