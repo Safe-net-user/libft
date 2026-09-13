@@ -156,6 +156,7 @@ $(SRC)/$(DS)/$(VECTOR)/insert_vector.c \
 $(SRC)/$(DS)/$(VECTOR)/pop_back_vector.c \
 $(SRC)/$(DS)/$(VECTOR)/push_back_vector.c \
 $(SRC)/$(DS)/$(VECTOR)/size_vector.c \
+$(SRC)/$(DS)/$(VECTOR)/free_vector.c \
 $(SRC)/$(CRYPTO)/joaat_hash.c \
 $(SRC)/$(IO)/$(FT_PRINTF)/ft_parsing_format.c \
 $(SRC)/$(IO)/$(FT_PRINTF)/ft_printf.c \

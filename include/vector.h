@@ -17,5 +17,6 @@ size_t	size_vector(t_vec *v);
 void	push_back_vector(t_vec *v, void *x);
 void	pop_back_vector(t_vec *v);
 void	insert_vector(t_vec *v, size_t i, void *x);
+void	free_vector(t_vec *v);
 
 #endif //VECTOR_H
