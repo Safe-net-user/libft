@@ -3,8 +3,6 @@
 #include "ft_stdlib.h"
 #include<stddef.h>
 
-#include "../../../include/vector.h"
-
 void	push_back_vector(t_vec *v, void *x)
 {
 	size_t	new_capacity;
